@@ -2,6 +2,7 @@ export interface Guest {
   id: string
   name: string
   role: string
+  photo?: string
 }
 
 export interface Quote {

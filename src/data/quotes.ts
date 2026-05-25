@@ -5,25 +5,36 @@ import type { Quote, Guest, RoundPrompt } from '../lib/types'
 // listenLinks slugs are best-guess — verify URLs before submitting.
 
 const guests: Guest[] = [
-  { id: 'jeetu-patel',      name: 'Jeetu Patel',      role: 'EVP & CPO, Cisco' },
-  { id: 'jenny-wen',        name: 'Jenny Wen',         role: 'Head of Product, Figma' },
-  { id: 'shreyas-doshi',    name: 'Shreyas Doshi',     role: 'Former Group PM, Twitter · Stripe · Google' },
-  { id: 'julie-zhuo',       name: 'Julie Zhuo',        role: 'Former VP Product Design, Facebook' },
-  { id: 'gibson-biddle',    name: 'Gibson Biddle',     role: 'Former VP Product, Netflix' },
+  { id: 'jeetu-patel',      name: 'Jeetu Patel',      role: 'Chief Product Officer & President, Cisco',          photo: '/imgs/guests/jeetu-patel.jpg' },
+  { id: 'jenny-wen',        name: 'Jenny Wen',         role: 'Head of Design, Claude at Anthropic',               photo: '/imgs/guests/jenny-wen.jpg' },
+  { id: 'shreyas-doshi',    name: 'Shreyas Doshi',     role: 'Former Group PM, Twitter · Stripe · Google',        photo: '/imgs/guests/shreyas-doshi.jpg' },
+  { id: 'julie-zhuo',       name: 'Julie Zhuo',        role: 'Former VP Product Design, Facebook',                photo: '/imgs/guests/julie-zhuo.jpg' },
+  { id: 'gibson-biddle',    name: 'Gibson Biddle',     role: 'Former VP Product, Netflix',                        photo: '/imgs/guests/gibson-biddle.jpg' },
   { id: 'aishwarya-kiriti', name: 'Aishwarya Naresh Reganti & Kiriti Badam', role: 'AI Product Leaders' },
-  { id: 'maggie-crowley',   name: 'Maggie Crowley',    role: 'VP Product, Drift' },
-  { id: 'teresa-torres',    name: 'Teresa Torres',     role: 'Author, Continuous Discovery Habits' },
-  { id: 'marty-cagan',      name: 'Marty Cagan',       role: 'Founder, Silicon Valley Product Group' },
-  { id: 'emily-kramer',     name: 'Emily Kramer',      role: 'Co-founder MKT1 · ex-VP Marketing, Asana' },
+  { id: 'maggie-crowley',   name: 'Maggie Crowley',    role: 'VP Product, Drift',                                 photo: '/imgs/guests/maggie-crowley.jpg' },
+  { id: 'teresa-torres',    name: 'Teresa Torres',     role: 'Author, Continuous Discovery Habits',               photo: '/imgs/guests/teresa-torres.jpg' },
+  { id: 'marty-cagan',      name: 'Marty Cagan',       role: 'Founder, Silicon Valley Product Group',             photo: '/imgs/guests/marty-cagan.jpg' },
+  { id: 'emily-kramer',     name: 'Emily Kramer',      role: 'Co-founder MKT1 · ex-VP Marketing, Asana',          photo: '/imgs/guests/emily-kramer.jpg' },
 ]
 
 const quotes: Quote[] = [
   {
     id: 'q1',
-    text: "Stamina trumps intellect. I feel like it's very important to have smart people, but you can become smart if you have curiosity and hunger and staying power and persistence. And so I think that trait of learning to learn and constantly being hungry and having the stamina and persistence is far more important than the absolute measure of intellect that you might have, because that is very, very trainable.",
+    text: "Stamina trumps intellect. It's very important to have smart people, but you can become smart if you have curiosity and hunger and staying power and persistence.",
     guest: guests[0],
     episodeTitle: 'AI, product, and the traits that matter most',
-    episodeContext: 'Lenny asked Jeetu what qualities he looks for most in the builders he hires.',
+    episodeContext: "Lenny asked Jeetu what he wishes he'd known before taking on his role at Cisco — and what qualities he looks for in the builders he hires.",
+    episodeDescription: 'Jeetu Patel on how Cisco is rebuilding its products for an AI-first world — and the leadership philosophy behind building teams that can keep up.',
+    listenLinks: {
+      lenny: 'https://www.lennysnewsletter.com/p/jeetu-patel',
+    },
+  },
+  {
+    id: 'q1b',
+    text: "When there's a megatrend, don't fight it. AI is a megatrend, one of the most foundational movements that we have seen in human history.",
+    guest: guests[0],
+    episodeTitle: 'AI, product, and the traits that matter most',
+    episodeContext: 'Jeetu explaining how companies should recognize the difference between genuine megatrends and hype cycles — and why AI is the real thing.',
     episodeDescription: 'Jeetu Patel on how Cisco is rebuilding its products for an AI-first world — and the leadership philosophy behind building teams that can keep up.',
     listenLinks: {
       lenny: 'https://www.lennysnewsletter.com/p/jeetu-patel',
@@ -31,11 +42,22 @@ const quotes: Quote[] = [
   },
   {
     id: 'q2',
-    text: "It's not just designers who are feeling like, \"Oh yeah, we have to keep up with engineers.\" I think even engineers are like, \"How do we keep up with ourselves?\"",
+    text: "This design process that designers have been taught, we sort of treat it as gospel. That's basically dead.",
     guest: guests[1],
-    episodeTitle: 'Product design and the AI pace problem',
-    episodeContext: 'Jenny and Lenny were discussing the accelerating pace of change in tech and what it means for designers and builders.',
-    episodeDescription: 'Jenny Wen on what Figma is building, how AI is reshaping the designer-engineer relationship, and why staying curious is the only real career strategy.',
+    episodeTitle: 'Designing AI products and the death of the old design process',
+    episodeContext: 'Jenny opens the conversation by declaring the traditional diverge-converge design methodology no longer viable in an AI-accelerated world.',
+    episodeDescription: 'Jenny Wen on leading design for Claude at Anthropic, why the traditional design process is dead, and what it means to design AI products that people actually trust.',
+    listenLinks: {
+      lenny: 'https://www.lennysnewsletter.com/p/jenny-wen',
+    },
+  },
+  {
+    id: 'q2b',
+    text: "Someone still needs to be accountable for the decision.",
+    guest: guests[1],
+    episodeTitle: 'Designing AI products and the death of the old design process',
+    episodeContext: "When discussing AI's improving capabilities at taste and judgment, Jenny on why humans must ultimately own the decisions about what gets built.",
+    episodeDescription: 'Jenny Wen on leading design for Claude at Anthropic, why the traditional design process is dead, and what it means to design AI products that people actually trust.',
     listenLinks: {
       lenny: 'https://www.lennysnewsletter.com/p/jenny-wen',
     },

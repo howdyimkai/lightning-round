@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { Quote } from '../lib/types'
+import { Avatar } from './Avatar'
 
 interface EpisodeCardProps {
   quote: Quote
@@ -12,12 +13,6 @@ export function EpisodeCard({ quote, isLastRound, onContinue }: EpisodeCardProps
   const links = quote.listenLinks
   const hasAnyLink = Object.values(links).some(Boolean)
 
-  const initials = quote.guest.name
-    .split(' ')
-    .map((n) => n[0])
-    .join('')
-    .slice(0, 2)
-
   return (
     <div className="flex-1 flex flex-col px-6 py-8">
       <h2 className="text-xs text-text-muted uppercase tracking-wider text-center mb-6">
@@ -28,9 +23,7 @@ export function EpisodeCard({ quote, isLastRound, onContinue }: EpisodeCardProps
       <div className="bg-cream-dark rounded-2xl p-6 mb-5">
         {/* Guest header */}
         <div className="flex items-start gap-3 mb-4">
-          <div className="w-12 h-12 rounded-full bg-border flex items-center justify-center text-text-muted font-semibold text-sm shrink-0">
-            {initials}
-          </div>
+          <Avatar name={quote.guest.name} photo={quote.guest.photo} size="md" />
           <div className="flex-1 min-w-0">
             <p className="font-semibold text-text leading-tight">{quote.guest.name}</p>
             <p className="text-text-muted text-sm leading-tight mt-0.5">{quote.guest.role}</p>
@@ -95,7 +88,7 @@ export function EpisodeCard({ quote, isLastRound, onContinue }: EpisodeCardProps
 
       <button
         onClick={onContinue}
-        className="bg-sage hover:bg-sage-dark text-white font-semibold py-4 rounded-full transition-colors mt-auto"
+        className="bg-sage hover:bg-sage-dark text-white font-semibold py-4 rounded-full transition-colors"
       >
         {isLastRound ? 'See your persona card →' : 'Next round →'}
       </button>

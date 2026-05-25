@@ -1,4 +1,5 @@
 import type { Quote, Guest } from '../lib/types'
+import { Avatar } from './Avatar'
 
 interface RevealPhaseProps {
   quote: Quote
@@ -20,13 +21,7 @@ export function RevealPhase({
       </h2>
 
       <div className="bg-cream-dark rounded-2xl p-6 mb-6 text-center">
-        <div className="w-16 h-16 rounded-full bg-border mx-auto mb-3 flex items-center justify-center text-text-muted text-xl font-semibold">
-          {quote.guest.name
-            .split(' ')
-            .map((n) => n[0])
-            .join('')
-            .slice(0, 2)}
-        </div>
+        <Avatar name={quote.guest.name} photo={quote.guest.photo} size="xl" className="mx-auto mb-3" />
         <h3 className="text-xl font-semibold text-text">{quote.guest.name}</h3>
         <p className="text-text-muted text-sm mb-3">{quote.guest.role}</p>
 
@@ -34,7 +29,7 @@ export function RevealPhase({
           className={`inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-sm font-medium ${
             guessedCorrectly
               ? 'bg-sage-light text-sage-dark'
-              : 'bg-rose-light text-text'
+              : 'bg-rose-light text-rose-dark'
           }`}
         >
           {guessedCorrectly ? '✓ Correct' : '✗ Nice try'}
@@ -51,10 +46,10 @@ export function RevealPhase({
       </h2>
       <div className="bg-cream-dark rounded-2xl p-4 mb-6 text-center">
         <p className="text-sage font-medium text-sm">
-          Be one of the first to play this card.
+          You're one of the first to respond to this quote.
         </p>
         <p className="text-text-muted text-xs">
-          Stats appear as more designers respond.
+          Community stats will appear as more people weigh in.
         </p>
       </div>
 
