@@ -16,7 +16,7 @@ export function RevealPhase({
 }: RevealPhaseProps) {
   return (
     <div className="flex-1 flex flex-col px-6 py-8">
-      <h2 className="text-xs text-text-muted uppercase tracking-wider text-center mb-6">
+      <h2 className="text-sm text-text-muted uppercase tracking-wider text-center mb-6">
         The Reveal
       </h2>
 
@@ -41,11 +41,11 @@ export function RevealPhase({
         )}
       </div>
 
-      <h2 className="text-xs text-text-muted uppercase tracking-wider text-center mb-3">
+      <h2 className="text-sm text-text-muted uppercase tracking-wider text-center mb-3">
         The Community
       </h2>
       <div className="bg-cream-dark rounded-2xl p-4 mb-6 text-center">
-        <p className="text-sage font-medium text-sm">
+        <p className="text-sage-dark font-medium text-sm">
           You're one of the first to respond to this quote.
         </p>
         <p className="text-text-muted text-xs">
@@ -53,7 +53,7 @@ export function RevealPhase({
         </p>
       </div>
 
-      <h2 className="text-xs text-text-muted uppercase tracking-wider text-center mb-3">
+      <h2 className="text-sm text-text-muted uppercase tracking-wider text-center mb-3">
         In Context
       </h2>
       <div className="bg-cream-dark rounded-2xl p-6 mb-8">
@@ -66,7 +66,7 @@ export function RevealPhase({
 
       <button
         onClick={onContinue}
-        className="bg-sage hover:bg-sage-dark text-white font-semibold py-4 rounded-full transition-colors mt-auto"
+        className="bg-sage hover:bg-sage-dark text-white font-semibold py-4 rounded-full transition-colors"
       >
         See the episode →
       </button>

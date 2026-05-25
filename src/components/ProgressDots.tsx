@@ -18,7 +18,7 @@ export function ProgressDots({ current, total, results }: ProgressDotsProps) {
               i < current
                 ? results[i]?.guessedCorrectly
                   ? 'bg-sage'
-                  : 'bg-rose'
+                  : 'bg-rose-dark'
                 : i === current
                   ? 'bg-text'
                   : 'bg-border'

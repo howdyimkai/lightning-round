@@ -15,7 +15,7 @@ export function EpisodeCard({ quote, isLastRound, onContinue }: EpisodeCardProps
 
   return (
     <div className="flex-1 flex flex-col px-6 py-8">
-      <h2 className="text-xs text-text-muted uppercase tracking-wider text-center mb-6">
+      <h2 className="text-sm text-text-muted uppercase tracking-wider text-center mb-6">
         The Episode
       </h2>
 
@@ -56,7 +56,7 @@ export function EpisodeCard({ quote, isLastRound, onContinue }: EpisodeCardProps
 
         {/* In this episode — the quote in context */}
         <div className="mt-4 pt-4 border-t border-border">
-          <p className="text-xs text-text-muted uppercase tracking-wider mb-2">In this episode</p>
+          <p className="text-sm text-text-muted uppercase tracking-wider mb-2">In this episode</p>
           <p className="text-text-muted text-sm leading-relaxed italic">
             {quote.episodeContext} — {quote.guest.name} said: "{quote.text}"
           </p>
@@ -66,7 +66,7 @@ export function EpisodeCard({ quote, isLastRound, onContinue }: EpisodeCardProps
       {/* Listen links */}
       {hasAnyLink && (
         <div className="mb-6">
-          <p className="text-xs text-text-muted uppercase tracking-wider text-center mb-3">
+          <p className="text-sm text-text-muted uppercase tracking-wider text-center mb-3">
             Listen to this episode
           </p>
           <div className="flex flex-col gap-2">

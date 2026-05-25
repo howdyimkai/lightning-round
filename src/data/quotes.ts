@@ -10,7 +10,7 @@ const guests: Guest[] = [
   { id: 'shreyas-doshi',    name: 'Shreyas Doshi',     role: 'Former Group PM, Twitter · Stripe · Google',        photo: '/imgs/guests/shreyas-doshi.jpg' },
   { id: 'julie-zhuo',       name: 'Julie Zhuo',        role: 'Former VP Product Design, Facebook',                photo: '/imgs/guests/julie-zhuo.jpg' },
   { id: 'gibson-biddle',    name: 'Gibson Biddle',     role: 'Former VP Product, Netflix',                        photo: '/imgs/guests/gibson-biddle.jpg' },
-  { id: 'aishwarya-kiriti', name: 'Aishwarya Naresh Reganti & Kiriti Badam', role: 'AI Product Leaders' },
+  { id: 'aishwarya-kiriti', name: 'Aishwarya Naresh Reganti & Kiriti Badam', role: 'AI Product Leaders',         photo: '/imgs/guests/Naresh-Kiriti.png' },
   { id: 'maggie-crowley',   name: 'Maggie Crowley',    role: 'VP Product, Drift',                                 photo: '/imgs/guests/maggie-crowley.jpg' },
   { id: 'teresa-torres',    name: 'Teresa Torres',     role: 'Author, Continuous Discovery Habits',               photo: '/imgs/guests/teresa-torres.jpg' },
   { id: 'marty-cagan',      name: 'Marty Cagan',       role: 'Founder, Silicon Valley Product Group',             photo: '/imgs/guests/marty-cagan.jpg' },
@@ -26,7 +26,7 @@ const quotes: Quote[] = [
     episodeContext: "Lenny asked Jeetu what he wishes he'd known before taking on his role at Cisco — and what qualities he looks for in the builders he hires.",
     episodeDescription: 'Jeetu Patel on how Cisco is rebuilding its products for an AI-first world — and the leadership philosophy behind building teams that can keep up.',
     listenLinks: {
-      lenny: 'https://www.lennysnewsletter.com/p/jeetu-patel',
+      lenny: 'https://www.lennysnewsletter.com/p/ai-is-critical-for-humanitys-survival',
     },
   },
   {
@@ -37,7 +37,7 @@ const quotes: Quote[] = [
     episodeContext: 'Jeetu explaining how companies should recognize the difference between genuine megatrends and hype cycles — and why AI is the real thing.',
     episodeDescription: 'Jeetu Patel on how Cisco is rebuilding its products for an AI-first world — and the leadership philosophy behind building teams that can keep up.',
     listenLinks: {
-      lenny: 'https://www.lennysnewsletter.com/p/jeetu-patel',
+      lenny: 'https://www.lennysnewsletter.com/p/ai-is-critical-for-humanitys-survival',
     },
   },
   {
@@ -48,7 +48,7 @@ const quotes: Quote[] = [
     episodeContext: 'Jenny opens the conversation by declaring the traditional diverge-converge design methodology no longer viable in an AI-accelerated world.',
     episodeDescription: 'Jenny Wen on leading design for Claude at Anthropic, why the traditional design process is dead, and what it means to design AI products that people actually trust.',
     listenLinks: {
-      lenny: 'https://www.lennysnewsletter.com/p/jenny-wen',
+      lenny: 'https://www.lennysnewsletter.com/p/the-design-process-is-dead',
     },
   },
   {
@@ -59,7 +59,7 @@ const quotes: Quote[] = [
     episodeContext: "When discussing AI's improving capabilities at taste and judgment, Jenny on why humans must ultimately own the decisions about what gets built.",
     episodeDescription: 'Jenny Wen on leading design for Claude at Anthropic, why the traditional design process is dead, and what it means to design AI products that people actually trust.',
     listenLinks: {
-      lenny: 'https://www.lennysnewsletter.com/p/jenny-wen',
+      lenny: 'https://www.lennysnewsletter.com/p/the-design-process-is-dead',
     },
   },
   {
@@ -70,7 +70,7 @@ const quotes: Quote[] = [
     episodeContext: 'Shreyas on the difference between reactive product work and deliberate product strategy.',
     episodeDescription: 'Shreyas Doshi on building product intuition, the hidden leverage of saying no, and why the best PMs he knows think more like philosophers than engineers.',
     listenLinks: {
-      lenny: 'https://www.lennysnewsletter.com/p/shreyas-doshi',
+      lenny: 'https://www.lennysnewsletter.com/p/episode-3-shreyas-doshi',
     },
   },
   {
@@ -81,7 +81,7 @@ const quotes: Quote[] = [
     episodeContext: 'Julie on what separates good design craft from design that actually moves a business.',
     episodeDescription: 'Julie Zhuo on the lessons she learned leading design at Facebook — and the hard things about management she wishes someone had told her on day one.',
     listenLinks: {
-      lenny: 'https://www.lennysnewsletter.com/p/julie-zhuo',
+      lenny: 'https://www.lennysnewsletter.com/p/episode-2-julie-zhuo',
     },
   },
   {
@@ -92,7 +92,7 @@ const quotes: Quote[] = [
     episodeContext: 'Gibson walking through how Netflix approached strategy as an ongoing experiment rather than a fixed plan.',
     episodeDescription: 'Gibson Biddle on how Netflix built one of the most admired product cultures in the world — and the DHM model (Delight, Hard to copy, Margin-enhancing) that made it work.',
     listenLinks: {
-      lenny: 'https://www.lennysnewsletter.com/p/gibson-biddle',
+      lenny: 'https://www.lennysnewsletter.com/p/gibson-biddle-on-the-the-dhm-product',
     },
   },
   {
@@ -103,7 +103,7 @@ const quotes: Quote[] = [
     episodeContext: 'Teresa on why most product teams do research wrong — and what genuine discovery actually looks like in practice.',
     episodeDescription: 'Teresa Torres on why the best product teams treat customer discovery as a weekly habit, not a quarterly project — and the framework she\'s used to help hundreds of teams ship better products.',
     listenLinks: {
-      lenny: 'https://www.lennysnewsletter.com/p/teresa-torres',
+      lenny: 'https://www.lennysnewsletter.com/p/teresa-torres-on-how-to-interview',
     },
   },
   {
@@ -114,7 +114,7 @@ const quotes: Quote[] = [
     episodeContext: 'Marty on what separates the product culture at companies like Apple and Netflix from the average feature-shipping machine.',
     episodeDescription: 'Marty Cagan on why most companies are doing product wrong — the difference between empowered teams and feature factories, and what it takes to actually fix it.',
     listenLinks: {
-      lenny: 'https://www.lennysnewsletter.com/p/marty-cagan',
+      lenny: 'https://www.lennysnewsletter.com/p/product-management-theater-marty',
     },
   },
   {
@@ -125,7 +125,7 @@ const quotes: Quote[] = [
     episodeContext: 'Emily on the biggest mistakes she sees early-stage startups make with marketing — and how to fix them.',
     episodeDescription: 'Emily Kramer on how Asana built a marketing machine from scratch, why most startup marketing is backward, and the frameworks she teaches through MKT1.',
     listenLinks: {
-      lenny: 'https://www.lennysnewsletter.com/p/emily-kramer',
+      lenny: 'https://www.lennysnewsletter.com/p/how-to-build-a-powerful-marketing',
     },
   },
   {
@@ -136,7 +136,7 @@ const quotes: Quote[] = [
     episodeContext: 'Maggie on how she thinks about building discovery into the rhythm of a product team, not bolting it on as a separate activity.',
     episodeDescription: 'Maggie Crowley on Drift\'s product-led growth strategy, building discovery habits into team culture, and how to make sure customer insight actually changes what you ship.',
     listenLinks: {
-      lenny: 'https://www.lennysnewsletter.com/p/maggie-crowley',
+      lenny: 'https://www.lennysnewsletter.com/p/mastering-product-strategy-and-growing',
     },
   },
   {
@@ -147,7 +147,7 @@ const quotes: Quote[] = [
     episodeContext: 'On the challenge of building AI products that earn trust and actually solve real problems rather than just showcasing what\'s technically possible.',
     episodeDescription: 'Two AI product leaders on the lessons learned shipping AI features at scale — what works, what doesn\'t, and how the craft of product management is changing.',
     listenLinks: {
-      lenny: 'https://www.lennysnewsletter.com/p/ai-product-management',
+      lenny: 'https://www.lennysnewsletter.com/p/why-your-ai-product-needs-a-different',
     },
   },
 ]

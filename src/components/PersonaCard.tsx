@@ -35,6 +35,13 @@ export function PersonaCard({ results, onPlayAgain }: PersonaCardProps) {
     link.click()
   }
 
+  const badgeMap: Record<string, string> = {
+    oracle:     '/imgs/badge/oraclebadge.png',
+    contrarian: '/imgs/badge/contrarianbadge.png',
+    curious:    '/imgs/badge/curiousbadge.png',
+    beginner:   '/imgs/badge/beginnerbadge.png',
+  }
+
   const colorMap: Record<string, string> = {
     oracle: 'bg-purple-50 border-purple-300',
     contrarian: 'bg-blue-50 border-blue-300',
@@ -59,14 +66,6 @@ export function PersonaCard({ results, onPlayAgain }: PersonaCardProps) {
       >
         <div className="p-4 flex justify-between items-center">
           <h3 className="font-semibold text-text">{info.name}</h3>
-          <span className="text-text-muted text-sm">HP {correctCount}</span>
-        </div>
-
-        <div className="flex items-center justify-center py-6 text-5xl">
-          {info.icon}
-        </div>
-
-        <div className="px-4 pb-2">
           <span
             className={`inline-block text-xs font-medium px-3 py-1 rounded-full ${labelColorMap[info.color]}`}
           >
@@ -80,48 +79,25 @@ export function PersonaCard({ results, onPlayAgain }: PersonaCardProps) {
           </span>
         </div>
 
-        <div className="px-4 py-3 border-t border-inherit">
-          <p className="text-text-muted text-xs">
-            {correctCount}/{results.length} identified · {results.filter((r) => r.agreed).length} agree · 0 reflections
-          </p>
+        <div className="flex items-center justify-center py-4 px-6">
+          <img
+            src={badgeMap[persona]}
+            alt={`${info.name} badge`}
+            className="w-full aspect-square object-contain"
+          />
         </div>
 
         <div className="px-4 py-3 border-t border-inherit">
-          <h4 className="font-semibold text-text text-sm">
-            {persona === 'oracle'
-              ? 'Deep Read'
-              : persona === 'contrarian'
-                ? 'Sharp Edge'
-                : persona === 'curious'
-                  ? 'Open Thread'
-                  : 'Fresh Eyes'}
-          </h4>
           <p className="text-text-muted text-sm mt-1">{info.description}</p>
         </div>
 
         <div className="px-4 py-3 border-t border-inherit flex justify-between items-center">
-          <div className="text-text-muted text-xs">
-            <span className="text-sage font-medium">Score {correctCount}</span>
-            {' · '}Common
-          </div>
-          <span className="text-text-muted text-xs">designgarden.xyz</span>
+          <span className="text-text-muted text-xs">Lenny's Lightning Round</span>
+          <span className="text-sage font-medium text-sm">{correctCount}/{results.length} correct</span>
         </div>
-      </div>
 
-      <div className="flex gap-3 w-full mt-6">
-        <div className="flex-1 bg-cream-dark rounded-2xl py-4 text-center">
-          <span className="text-2xl font-bold text-text block">
-            {correctCount}/{results.length}
-          </span>
-          <span className="text-xs text-text-muted uppercase tracking-wider">
-            Correct guesses
-          </span>
-        </div>
-        <div className="flex-1 bg-cream-dark rounded-2xl py-4 text-center">
-          <span className="text-2xl font-bold text-text block">{correctCount}</span>
-          <span className="text-xs text-text-muted uppercase tracking-wider">
-            Score
-          </span>
+        <div className="px-4 py-2 border-t border-inherit text-center">
+          <span className="text-text-muted text-[11px]">by kai tran • howdyimkai.com</span>
         </div>
       </div>
 

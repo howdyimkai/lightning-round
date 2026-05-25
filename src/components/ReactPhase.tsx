@@ -12,7 +12,7 @@ export function ReactPhase({ quoteText, onReact }: ReactPhaseProps) {
       </p>
 
       <div className="bg-cream-dark rounded-2xl p-6 mb-10 w-full">
-        <p className="text-text text-base leading-relaxed text-center italic">
+        <p className="text-text text-xl leading-relaxed text-center italic">
           "{quoteText}"
         </p>
       </div>
@@ -23,7 +23,7 @@ export function ReactPhase({ quoteText, onReact }: ReactPhaseProps) {
           className="bg-cream-dark hover:bg-border rounded-2xl py-5 transition-colors"
         >
           <span className="text-lg font-semibold text-text block">Agree</span>
-          <span className="text-xs text-text-muted uppercase tracking-wider">
+          <span className="text-sm text-text-muted uppercase tracking-wider">
             I'm with them
           </span>
         </button>
@@ -32,7 +32,7 @@ export function ReactPhase({ quoteText, onReact }: ReactPhaseProps) {
           className="bg-cream-dark hover:bg-border rounded-2xl py-5 transition-colors"
         >
           <span className="text-lg font-semibold text-text block">Disagree</span>
-          <span className="text-xs text-text-muted uppercase tracking-wider">
+          <span className="text-sm text-text-muted uppercase tracking-wider">
             Not quite
           </span>
         </button>
